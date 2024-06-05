@@ -1,0 +1,32 @@
+/* LoginForm.module.css */
+.passwordWrapper {
+  position: relative;
+}
+
+/* Specifically for Edge */
+.passwordWrapper :global(input[type="password"]::-ms-reveal) {
+  display: none;
+}
+
+/* Specifically for Chrome */
+.passwordWrapper :global(input[type="password"]::-webkit-text-security) {
+  display: none;
+}
+
+/* Hide increment and decrement buttons in number input fields */
+.noSpinner {
+  /* Remove the spinners for WebKit browsers (Chrome, Safari) */
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.noSpinner::-webkit-outer-spin-button,
+.noSpinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove the spinners for Firefox */
+.noSpinner[type="number"] {
+  -moz-appearance: textfield;
+}
